@@ -38,25 +38,24 @@ public class Problem6 {
     }
 
     //Return sum of the squares
+    //Sum of squares of first n numbers = n(n+1)(2n+1)/6
     private long sumOfSqaures(int num) {
-        int result=0;
-        for(int i=1;i<=num;i++){
-            result+=i*i;
 
-        }
 
-        return result;
+        return (num*(num+1)*(2*num+1))/6;
     }
 
 
     //Return square of the sum
-    private long squaresOfSum(int num) {
-        int result=0;
-        for(int i=1;i<=num;i++){
-            result+=i;
-        }
+    // Sum of first n numbers = n(n+1)/2
+    private long squaresOfSum(long num) {
+
+        long result=((num*(num+1))/2);
+
         return result*result;
     }
+
+
 
 
     @Test(timeout=50)
@@ -82,7 +81,7 @@ public class Problem6 {
     public void TestSumOfSquareDifference_100(){
         long sumSquareOfDifference=sumSquareDifference(100);
         System.out.println("Sum square difference : "+sumSquareOfDifference);
-       assertThat("Incorrect Sum square difference of the first ten natural numbers", sumSquareOfDifference , is(25164150L));
+        assertThat("Incorrect Sum square difference of the first 100 natural numbers", sumSquareOfDifference , is(25164150L));
     }
 
 
