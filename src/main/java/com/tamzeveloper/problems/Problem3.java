@@ -230,10 +230,10 @@ public class Problem3 {
     @Test(timeout=50)
     public void TestlargestPrimeFactorOf_600851475143(){
 
-        long largestPrimeFactorOf_600851475143=largestPrimeFactor(600851475143l);
+        long largestPrimeFactorOf_600851475143=largestPrimeFactor(600851475143L);
         System.out.println("\nLargest prime factor of 600851475143l :"+largestPrimeFactorOf_600851475143);
         assertNotEquals("Incorrect largest prime factor of  600851475143L", largestPrimeFactorOf_600851475143, 0);
-        assertThat("Incorrect largest prime factor of  600851475143L",largestPrimeFactorOf_600851475143,is(6857l));
+        assertThat("Incorrect largest prime factor of  600851475143L",largestPrimeFactorOf_600851475143,is(6857L));
 
 
     }
