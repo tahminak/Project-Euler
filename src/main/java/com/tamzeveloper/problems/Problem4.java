@@ -2,8 +2,10 @@ package com.tamzeveloper.problems;
 
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by Tahmina Khan
@@ -20,16 +22,28 @@ import static org.hamcrest.CoreMatchers.is;
 public class Problem4 {
 
 
-    @Test(timeout=50)
+    @Test(timeout=80)
     public void TestLargestPalindrom(){
 
          int largestPalindrom=largestPalindromNum(3);
          System.out.println("\nLargest palindrom of 2- digits = "+largestPalindrom);
-         assertThat("Incorrect Largest Palindrom of 2-digit numbers",largestPalindrom, is(9009));
+         assertThat("Incorrect Largest Palindrom of 2-digit numbers",largestPalindrom, is(906609));
 
 
     }
 
+
+    @Test(timeout=50)
+    public void TestIsPalindrom(){
+
+
+        assertTrue("Incorrect Palindrom number", isPalindrome(9009 + ""));
+
+        assertFalse("Incorrect Palindrom number", isPalindrome(9109 + ""));
+      //  assertTrue("Incorrect Palindrom number", isPalindrome(9009 + ""));
+
+      //assertFalse("Incorrect Palindrom number", isPalindrome(Integer.toString(2200022)));
+    }
 
 
     private int largestPalindromNum(int num) {
@@ -43,27 +57,31 @@ public class Problem4 {
             nDigitsStr+="9";
         }
 
-        largestNumberOfNum=Integer.valueOf(nDigitsStr);
+      largestNumberOfNum=Integer.valueOf(nDigitsStr);
+      System.out.println(largestNumberOfNum);
 
-        for(int i=largestNumberOfNum*largestNumberOfNum;largestNumberOfNum>0;largestNumberOfNum--){
+        int x, y, product, max = 0;
 
-            if(isPalindrome(i+"")){
-                return i;
+        for (x = 100; x <= 999; x++) {
+            for (y = x; y <= 999; y++) {
+                product = x * y;
+                if (isPalindrome(Integer.toString(product))) {
+                    if( max < product ) { // this is new
+                        max = product;
+
+                    }
+                }
             }
         }
 
 
-        return largestNumberOfNum;
+        return max;
     }
 
-    public boolean isPalindrome(String s) {
-        int n = s.length();
-        for (int i=0;i<(n / 2) + 1;++i) {
-            if (s.charAt(i) != s.charAt(n - i - 1)) {
-                return false;
-            }
-        }
+    public boolean isPalindrome(String str) {
 
-        return true;
+        StringBuilder reverese=new StringBuilder(str).reverse();
+
+        return str.equals(reverese.toString());
     }
 }
