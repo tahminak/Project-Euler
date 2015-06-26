@@ -24,12 +24,23 @@ public class Problem5 {
 
 
     @Test(timeout=50)
-    public void TestSumOfSquareDifference_10(){
-        // System.out.println("Incorrect Sum square difference of the first ten natural numbers  ");
-        assertThat("Incorrect Smallest number divisible by 1 to 10", smallestDivisible(10) , is(2520));
+    public void TestSmallestDivisible1_10(){
+
+        int smallesDivisibleNum=smallestDivisible(10);
+
+
+        System.out.println("\nSmallest number divisible by 1 to 10 : "+smallesDivisibleNum);
+        assertThat("Incorrect Smallest number divisible by 1 to 10", smallesDivisibleNum , is(2520));
     }
 
-    private int smallestDivisible(int i) {
-        return 0;
+    private int smallestDivisible(int num) {
+         int smallesDivisible=0;
+        for(int i=1;i<=num;i++){
+
+
+        }
+
+
+        return smallesDivisible;
     }
 }
