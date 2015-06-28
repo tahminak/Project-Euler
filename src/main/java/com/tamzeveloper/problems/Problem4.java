@@ -10,12 +10,9 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by Tahmina Khan
  */
-/*
-
-        A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-
-            Find the largest palindrome made from the product of two 3-digit numbers.
-
+/*      A palindromic number reads the same both ways.
+        The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+        Find the largest palindrome made from the product of two 3-digit numbers.
 
  */
 
@@ -40,9 +37,9 @@ public class Problem4 {
         assertTrue("Incorrect Palindrom number", isPalindrome(9009 + ""));
 
         assertFalse("Incorrect Palindrom number", isPalindrome(9109 + ""));
-      //  assertTrue("Incorrect Palindrom number", isPalindrome(9009 + ""));
+        //  assertTrue("Incorrect Palindrom number", isPalindrome(9009 + ""));
 
-      //assertFalse("Incorrect Palindrom number", isPalindrome(Integer.toString(2200022)));
+       //assertFalse("Incorrect Palindrom number", isPalindrome(Integer.toString(2200022)));
     }
 
 
