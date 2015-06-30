@@ -30,21 +30,33 @@ public class Problem5 {
 
 
         System.out.println("\nSmallest number divisible by 1 to 10 : "+smallesDivisibleNum);
-      //  assertThat("Incorrect Smallest number divisible by 1 to 10", smallesDivisibleNum , is(2520));
+        assertThat("Incorrect Smallest number divisible by 1 to 10", smallesDivisibleNum , is(2520));
+    }
+
+    @Test(timeout=50)
+    public void TestSmallestDivisible1_20(){
+
+        int smallesDivisibleNum=smallestDivisible(20);
+
+
+        System.out.println("\nSmallest number divisible by 1 to 20 : "+smallesDivisibleNum);
+        assertThat("Incorrect Smallest number divisible by 1 to 20", smallesDivisibleNum , is(232792560));
     }
 
     private int smallestDivisible(int num) {
-         int smallesDivisible=0;
-        for(int i=1;i<=num;i++){
+    int smallesDivisible=1;
+        for(int i=1;i<num-1;i++){
 
+            smallesDivisible=lcm(smallesDivisible,i+1);
 
         }
 
 
         return smallesDivisible;
+
     }
 
-    //public
+
 
     public int gcd(int a,int b){
 
@@ -83,5 +95,6 @@ public class Problem5 {
         // System.out.println("\nGCD of (54,24) : "+gcd);
         assertThat("Incorrect LCM of (6,10)",lcm , is(30));
         assertThat("Incorrect LCM of (12,30)",lcm(12,30) , is(60));
+        assertThat("Incorrect LCM of (1,2)",lcm(1,2) , is(2));
     }
 }
