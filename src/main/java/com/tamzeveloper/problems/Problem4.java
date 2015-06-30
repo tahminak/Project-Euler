@@ -19,21 +19,21 @@ import static org.junit.Assert.assertTrue;
 public class Problem4 {
 
 
-    @Test(timeout=80)
+    @Test(timeout=70)
     public void TestLargestPalindromOf_3Digits(){
 
          int largestPalindrom=largestPalindromNum(3);
-         System.out.println("\nLargest palindrom of 2- digits = "+largestPalindrom);
+       //  System.out.println("\nLargest palindrom of 2- digits = "+largestPalindrom);
          assertThat("Incorrect Largest Palindrom of 2-digit numbers",largestPalindrom, is(906609));
 
 
     }
 
-    @Test(timeout=80)
+    @Test(timeout=40)
     public void TestLargestPalindromOf_2Digits(){
 
         int largestPalindrom=largestPalindromNum(2);
-        System.out.println("\nLargest palindrom of 2- digits = "+largestPalindrom);
+        //System.out.println("\nLargest palindrom of 2- digits = "+largestPalindrom);
         assertThat("Incorrect Largest Palindrom of 2-digit numbers",largestPalindrom, is(9009));
 
 
