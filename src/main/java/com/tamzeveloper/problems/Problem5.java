@@ -43,6 +43,16 @@ public class Problem5 {
         assertThat("Incorrect Smallest number divisible by 1 to 20", smallesDivisibleNum , is(232792560));
     }
 
+    @Test(timeout=50)
+    public void TestSmallestDivisible1_15(){
+
+        int smallesDivisibleNum=smallestDivisible(15);
+
+
+        System.out.println("\nSmallest number divisible by 1 to 15 : "+smallesDivisibleNum);
+        assertThat("Incorrect Smallest number divisible by 1 to 15", smallesDivisibleNum , is(360360));
+    }
+
     //LCM(a,b,c,d) = LCM(LCM(LCM(a,b),c),d).
     private int smallestDivisible(int num) {
     int smallesDivisible=1;
