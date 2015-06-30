@@ -43,6 +43,7 @@ public class Problem5 {
         assertThat("Incorrect Smallest number divisible by 1 to 20", smallesDivisibleNum , is(232792560));
     }
 
+    //LCM(a,b,c,d) = LCM(LCM(LCM(a,b),c),d).
     private int smallestDivisible(int num) {
     int smallesDivisible=1;
         for(int i=1;i<num-1;i++){
@@ -68,6 +69,14 @@ public class Problem5 {
 
     }
 
+
+    /*
+
+      Find LCM by GCD
+
+      LCM(a,b) = (a*b)/GCD(a,b).
+
+     */
     public int lcm(int a,int b){
 
         return (a*b)/gcd(a,b);
