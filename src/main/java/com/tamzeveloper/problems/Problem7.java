@@ -69,21 +69,14 @@ public class Problem7 {
 
     @Test(timeout=50)
     public void Test6thPrime(){
-
-
         int _6_thPrime=nThPrime_1(6);
-
        assertThat("Incorrect 6Th Prime number", _6_thPrime, is(13));
 
     }
 
     @Test(timeout=50)
     public void Test10001thPrime(){
-
-
-
         int _10001_thPrime=nThPrime_1(10001);
-
         assertThat("Incorrect 10001Th Prime number", _10001_thPrime, is(104743));
 
     }
